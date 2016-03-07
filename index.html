@@ -47,7 +47,7 @@
                 <a href="#about" onclick = $("#menu-close").click(); >About</a>
             </li>
             <li>
-                <a href="#services" onclick = $("#menu-close").click(); >Services</a>
+                <a href="#skills" onclick = $("#menu-close").click(); >Skills</a>
             </li>
             <li>
                 <a href="#portfolio" onclick = $("#menu-close").click(); >Portfolio</a>
@@ -127,16 +127,19 @@
         <!-- /.container -->      
     </section>
 
-    <!-- Services -->
+    <!-- Skills -->
     <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
-    <section id="services" class="services bg-primary">
+    <section id="skills" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h2>Services</h2>
+                    <h2>My Skills</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-3 col-sm-6">
+                        <div class="col-md-6 col-sm-9">
+                            <canvas id="skills-chart" width="400" height="400"></canvas>
+                        </div>
+                        <!--<div class="col-md-3 col-sm-6">
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
@@ -187,7 +190,7 @@
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
                                 <a href="#" class="btn btn-light learn-more">Learn More</a>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
                     <!-- /.row (nested) -->
                 </div>
@@ -290,6 +293,7 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
     <script src="bower_components/typed.js/dist/typed.min.js"></script>
+    <script src="bower_components/Chart.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -323,6 +327,53 @@
             }
         });
     });
+    // skills chart
+    // Get context with jQuery - using jQuery's .get() method.
+    var chartData = [
+				{
+					value: 300,
+					color:"#F7464A",
+					highlight: "#FF5A5E",
+					label: "Red"
+				},
+				{
+					value: 50,
+					color: "#46BFBD",
+					highlight: "#5AD3D1",
+					label: "Green"
+				},
+				{
+					value: 100,
+					color: "#FDB45C",
+					highlight: "#FFC870",
+					label: "Yellow"
+				},
+				{
+					value: 40,
+					color: "#949FB1",
+					highlight: "#A8B3C5",
+					label: "Grey"
+				},
+				{
+					value: 120,
+					color: "#4D5360",
+					highlight: "#616774",
+					label: "Dark Grey"
+				}
+			];
+            // Get context with jQuery - using jQuery's .get() method.
+            var ctx = $("#skills-chart").get(0).getContext("2d");
+            // This will get the first returned node in the jQuery collection.
+            var myNewChart = new Chart(ctx).PolarArea(chartData, {
+					responsive:true
+				});
+			// window.onload = function(){
+			// 	var ctx = document.getElementById("skills-chart").getContext("2d");
+			// 	window.myPolarArea = new Chart(ctx).PolarArea(chartData, {
+			// 		responsive:true
+			// 	});
+			// };
+        
     // scrolls through testimonials
     $('.carousel').carousel({
         interval: 2000
