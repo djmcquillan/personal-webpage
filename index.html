@@ -62,7 +62,7 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Dan McQuillan</h1>
-            <h3>Web Developer | Engineer | Creative Problem Solver</h3>
+            <h3 class="sub-header"></h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">How Can I help You?</a>
         </div>
@@ -71,8 +71,11 @@
     <!-- About -->
     <section id="about" class="about">
         <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
+        <div class="row text-center">
+            <div class="col-lg-10 col-lg-offset-1">
+                <h2>About Me</h2>
+                <hr class="small"><br>
+                <!--carousel    -->
                    <div id="testimonial-slide" class="carousel slide" data-ride="carousel">
                     <!-- Indicators -->
                     <ol class="carousel-indicators">
@@ -121,7 +124,7 @@
             </div>
             <!-- /.row -->
         </div>
-        <!-- /.container -->
+        <!-- /.container -->      
     </section>
 
     <!-- Services -->
@@ -137,7 +140,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary"></i>
+                                <i class="fa fa-cloud fa-stack-1x text-primary service-icon"></i>
                             </span>
                                 <h4>
                                     <strong>Development</strong>
@@ -150,7 +153,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary"></i>
+                                <i class="fa fa-compass fa-stack-1x text-primary service-icon"></i>
                             </span>
                                 <h4>
                                     <strong>Creative</strong>
@@ -163,7 +166,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary"></i>
+                                <i class="fa fa-flask fa-stack-1x text-primary service-icon"></i>
                             </span>
                                 <h4>
                                     <strong>Engineering</strong>
@@ -176,7 +179,7 @@
                             <div class="service-item">
                                 <span class="fa-stack fa-4x">
                                 <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary"></i>
+                                <i class="fa fa-shield fa-stack-1x text-primary service-icon"></i>
                             </span>
                                 <h4>
                                     <strong></strong>
@@ -286,7 +289,7 @@
 
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
-
+    <script src="bower_components/typed.js/dist/typed.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -324,6 +327,22 @@
     $('.carousel').carousel({
         interval: 2000
     })
+    // typing animation for sub header
+    $(function(){
+      $(".sub-header").typed({
+        strings: ["Web Developer | Engineer | Creative Problem Solver"],
+        typeSpeed: 0,       
+            // // time before typing starts
+            startDelay: 1000,
+            // // backspacing speed
+            // backSpeed: 0,
+            // // time before backspacing
+            backDelay: 2000,
+            // // loop
+            loop: false,
+            showCursor: false
+      });
+  });
     </script>
 
 </body>
