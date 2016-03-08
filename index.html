@@ -70,23 +70,28 @@
     </header>
 
     <!-- About -->
-    <section id="about" class="about">
+    <section id="about" class="about-section">
         <div class="container">
-        <div class="row text-center">
-            <div class="col-lg-10 col-lg-offset-1">
+        <div class="text-center">
+            <!--<div class="col-lg-6 col-lg-offset-3">-->
                 <h2>About Me</h2>
                 <hr class="small"><br>
-                <!--carousel    -->
+                <p>Hey, I'm Dan and that's me in the corner! I am junior web developer with a background in mechanical engineering.<br>I love solving complex problems and bringing ideas to life through code.</p>
+                <div class="about-me">
+                    <img class="about-me-img" src="./img/world-map-me2.png" alt="Photo Loading!">
+                    <p>When I am not coding I love to be outside, camping, surfing(trying), golfing.  I also love to travel, Southeast Asia is next on my list.</p>                    
+                </div>
+                <!--carousel    
                    <div id="testimonial-slide" class="carousel slide" data-ride="carousel">
                         <!-- Indicators -->
-                        <ol class="carousel-indicators">
+                        <!--<ol class="carousel-indicators">
                             <li data-target="#testimonial-slide" data-slide-to="0" class="active"></li>
                             <li data-target="#testimonial-slide" data-slide-to="1"></li>
                             <li data-target="#testimonial-slide" data-slide-to="2"></li>
-                        </ol>
+                        </ol>-->
 
                     <!-- Wrapper for slides -->
-                    <div class="carousel-inner" role="listbox">
+                    <!--<div class="carousel-inner" role="listbox">
                         <div class="item active">
                             <img src="img_chania.jpg" alt="Technology">
                             <div class="carousel-caption">
@@ -111,8 +116,8 @@
                             </div>
                         </div>                                    
                     </div>                   
-                </div>
-            </div>
+                </div>-->
+            <!--</div>-->
             <!-- /.row -->
         </div>
         <!-- /.container --> 
@@ -273,7 +278,7 @@
     });
     // skills chart
     var chartData = {
-        labels: ["Javascript", "HTML5", "CSS", "jQuery", "Node.js", "AngularJS", "MongoDB","Ionic","Wordpress","Ruby on Rails"],
+        labels: ["Javascript", "HTML5", "CSS", "jQuery", "Node.js", "AngularJS", "MongoDB","Ionic","Wordpress","Ruby on Rails",""],
         datasets: [         
             {                   
                 label: "My 1st dataset",
@@ -289,7 +294,7 @@
             var ctx = $("#skills-chart").get(0).getContext("2d");
             // This will get the first returned node in the jQuery collection.
             var myBarChart = new Chart(ctx).Bar(chartData, {
-                responsive: false,
+                responsive: true,
                 scaleShowHorizontalLines: true,
                 scaleShowVerticalLines: false,
                 // scaleShowGridLines : false,
@@ -313,14 +318,7 @@
                     if(Number(valuePayload.value)===10)    
                     return 'Unstoppable...';                    
                     }                
-            });
-            // var myNewChart = new Chart(ctx).PolarArea(chartData, {
-			// 		// responsive:true,
-            //         scaleShowLabelBackdrop: false,
-            //         scaleShowLine : false,
-            //         tooltipTemplate: "<%if (label){%><%=label%><%}%>"                            
-            //             });			
-        
+            });        		        
     // scrolls through testimonials
     $('.carousel').carousel({
         interval: 2000
