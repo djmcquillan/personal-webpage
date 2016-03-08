@@ -64,7 +64,7 @@
             <h1>Dan McQuillan</h1>
             <h3 class="sub-header"></h3>
             <br>
-            <a href="#about" class="btn btn-dark btn-lg">How Can I help You?</a>
+            <a href="#about" class="btn btn-dark btn-lg">Learn more </a>
         </div>
     </header>
 
@@ -119,77 +119,18 @@
     </section>
 
     <!-- Skills -->
-    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->
+    <!-- The circle icons use Font Awesome's stacked icon classes. For more information, visit http://fontawesome.io/examples/ -->    
     <section id="skills" class="services bg-primary">
         <div class="container">
             <div class="row text-center">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <h2>My Skills</h2>
-                    <hr class="small">
-                    <!--<div class="skills-background">
-                        <img src="./img/wordcloud.png" alt="">
-                    </div>-->
-                    <div class="skills-area">
-                        <div class="row">                        
-                            <div class="col-md-6 col-sm-9">
-                                <canvas id="skills-chart" width="300" height="200"></canvas>
-                            </div>
-                        
-                        
-                        <!--<div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-cloud fa-stack-1x text-primary service-icon"></i>
-                            </span>
-                                <h4>
-                                    <strong>Development</strong>
-                                </h4>
-                                <p>Whether you need a custom website or application built from the ground up or need a creative update to your existing website, I am your guy! </p>                                                               
-                                <a href="#" class="btn btn-light learn-more">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-compass fa-stack-1x text-primary service-icon"></i>
-                            </span>
-                                <h4>
-                                    <strong>Creative</strong>
-                                </h4>
-                                <p>Let me help you break down your business and dive deep into who your audience or customer is and how to best connect!</p>
-                                <a href="#" class="btn btn-light learn-more">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-flask fa-stack-1x text-primary service-icon"></i>
-                            </span>
-                                <h4>
-                                    <strong>Engineering</strong>
-                                </h4>
-                                <p>From 3D printing to continuous improvement efforts I will assist wherever I can</p>
-                                <a href="#" class="btn btn-light learn-more">Learn More</a>
-                            </div>
-                        </div>
-                        <div class="col-md-3 col-sm-6">
-                            <div class="service-item">
-                                <span class="fa-stack fa-4x">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-shield fa-stack-1x text-primary service-icon"></i>
-                            </span>
-                                <h4>
-                                    <strong></strong>
-                                </h4>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                                <a href="#" class="btn btn-light learn-more">Learn More</a>
-                            </div>
-                        </div>-->
-                    </div>
-                    </div>
+                <div class=".col-md-6 .col-md-offset-3">
+                    <div class="my-skills">
+                        <h2>My Top Skills</h2>
+                        <hr class="small"> 
+                    </div> 
+                    <div class=".col-md-6 .col.md-offset-3">                                     
+                    <canvas id="skills-chart"></canvas>
+                    </div>                     
                     <!-- /.row (nested) -->
                 </div>
                 <!-- /.col-lg-10 -->
@@ -331,60 +272,66 @@
 					value: 8,
 					color:"#F7464A",
 					highlight: "#FF5A5E",
-					label: "HTML"
+					label: "Javascript"
 				},
 				{
 					value: 8,
 					color: "#46BFBD",
 					highlight: "#5AD3D1",
-					label: "JavaScript"
-				},
-				{
-					value: 8,
-					color: "#FDB45C",
-					highlight: "#FFC870",
-					label: "CSS"
-				},
+					label: "HTML/CSS"
+				},				
 				{
 					value: 7,
 					color: "#949FB1",
 					highlight: "#A8B3C5",
 					label: "jQuery"
 				},
-				{
-					value: 6,
-					color: "#4D5360",
-					highlight: "#616774",
-					label: "MongoDB"
-				},
-                {
+                  {
 					value: 7,
 					color: "#4D5360",
 					highlight: "#616774",
 					label: "Node.js"
 				},
-                 {
+                   {
 					value: 7,
-					color: "#4D5360",
-					highlight: "#616774",
+					color: "#73A2ED",
+					highlight: "#73A2ED",
 					label: "Angular.js"
-				},                
+				},
+				{
+					value: 6,
+					color: "#46F795",
+					highlight: "#46F795",
+					label: "MongoDB"
+				},                                            
                  {
 					value: 5,
-					color: "#4D5360",
-					highlight: "#616774",
+					color: "#FFCDAB",
+					highlight: "#FFCDAB",
 					label: "Ionic"
+				},
+                 {
+					value: 5,
+					color: "#B0CCF9",
+					highlight: "#B0CCF9",
+					label: "Wordpress"
+				},
+                {
+					value: 5,
+					color: "#A9F8EB",
+					highlight: "#A9F8EC",
+					label: "Ruby on Rails"
 				}
 			];
             // Get context with jQuery - using jQuery's .get() method.
             var ctx = $("#skills-chart").get(0).getContext("2d");
             // This will get the first returned node in the jQuery collection.
             var myNewChart = new Chart(ctx).PolarArea(chartData, {
-					responsive:true,
+					// responsive:true,
                     scaleShowLabelBackdrop: false,
                     scaleShowLine : false,
-                    tooltipTemplate: "<%if (label){%><%=label%><%}%>"                   
-				});			
+                    tooltipTemplate: "<%if (label){%><%=label%><%}%>"                            
+                        });			
         
     // scrolls through testimonials
     $('.carousel').carousel({

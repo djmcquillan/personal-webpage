@@ -183,28 +183,45 @@ hr.small {
 }
 
 /* Skills */
-
-.services {
-    padding: 50px 0;    
-    background-color: #efefef;
-    color: #333;
+@media (min-width: 375px) {
+    #skills-chart {
+        width: 225px;
+        height: 225px;
+    }
+}
+@media (max-width: 649px) {
+    #skills-chart {
+        width: 225px;
+        height: 225px;
+    }
+}
+@media (min-width: 650px) {
+    #skills-chart {
+        width: 500px;
+        height: 500px;
+    }
 }
 
+.services {
+    padding: 15px 0;    
+    background-color: #efefef;
+    color: #333;
+    background: url(../img/wordcloud4.png) center scroll;
+    background-size: 350px 325px;     
+}
 .service-item {
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 .service-icon {
     color: #ec9b00;
 }
-
-.skills-area {
+.my-skills {
+    padding-bottom: 15px;
+}
+/*.skills-area {   
     background: url(../img/wordcloud3.png) center scroll;
-}
-
-.learn-more {
-    
-}
+}*/
 
 /* Callout */
 
