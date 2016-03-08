@@ -79,10 +79,10 @@
 			scaleStartValue: null,
 
 			// String - Colour of the scale line
-			scaleLineColor: "rgba(0,0,0,.1)",
+			scaleLineColor: "#222",
 
 			// Number - Pixel width of the scale line
-			scaleLineWidth: 1,
+			scaleLineWidth: 2,
 
 			// Boolean - Whether to show labels on the scale
 			scaleShowLabels: true,
@@ -97,16 +97,16 @@
 			scaleBeginAtZero: false,
 
 			// String - Scale label font declaration for the scale label
-			scaleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			scaleFontFamily: "'futura-pt-condensed', 'Futura Condensed', Impact, Helvetica",
 
 			// Number - Scale label font size in pixels
-			scaleFontSize: 12,
+			scaleFontSize: 16,
 
 			// String - Scale label font weight style
 			scaleFontStyle: "normal",
 
 			// String - Scale label font colour
-			scaleFontColor: "#666",
+			scaleFontColor: "#222",
 
 			// Boolean - whether or not the chart should be responsive and resize when the browser does.
 			responsive: false,
@@ -127,10 +127,10 @@
 			tooltipFillColor: "rgba(0,0,0,0.8)",
 
 			// String - Tooltip label font declaration for the scale label
-			tooltipFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			tooltipFontFamily: "'futura-pt-condensed', 'Futura Condensed', Impact, Helvetica",
 
 			// Number - Tooltip label font size in pixels
-			tooltipFontSize: 14,
+			tooltipFontSize: 16,
 
 			// String - Tooltip font weight style
 			tooltipFontStyle: "normal",
@@ -139,10 +139,10 @@
 			tooltipFontColor: "#fff",
 
 			// String - Tooltip title font declaration for the scale label
-			tooltipTitleFontFamily: "'Helvetica Neue', 'Helvetica', 'Arial', sans-serif",
+			tooltipTitleFontFamily: "'futura-pt-condensed', 'Futura Condensed', Impact, Helvetica",
 
 			// Number - Tooltip title font size in pixels
-			tooltipTitleFontSize: 14,
+			tooltipTitleFontSize: 16,
 
 			// String - Tooltip title font weight style
 			tooltipTitleFontStyle: "bold",

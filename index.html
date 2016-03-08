@@ -62,6 +62,7 @@
     <header id="top" class="header">
         <div class="text-vertical-center">
             <h1>Dan McQuillan</h1>
+            <hr class="small">
             <h3 class="sub-header"></h3>
             <br>
             <a href="#about" class="btn btn-dark btn-lg">Learn more </a>
@@ -152,36 +153,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1 text-center">
-                    <h2>Work</h2>
+                    <h2>My Work</h2>
                     <hr class="small">
                     <div class="row">
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-1.jpg">
+                                    <img class="img-portfolio img-responsive" src="img/street_scout.png">
                                 </a>
                             </div>
+                            <hr class="small">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-2.jpg">
+                                    <img class="img-portfolio img-responsive" src="img/spark.png">
                                 </a>
                             </div>
+                            <hr class="small">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-3.jpg">
+                                    <img class="img-portfolio img-responsive" src="img/topout.png">
                                 </a>
                             </div>
+                            <hr class="small">
                         </div>
-                        <div class="col-md-6">
+                        <div class="col-md-4">
                             <div class="portfolio-item">
                                 <a href="#">
-                                    <img class="img-portfolio img-responsive" src="img/portfolio-4.jpg">
+                                    <img class="img-portfolio img-responsive" src="img/landingscreen.png">
                                 </a>
                             </div>
+                            <hr class="small">
                         </div>
                     </div>
                     <!-- /.row (nested) -->
@@ -266,72 +271,55 @@
             }
         });
     });
-    // skills chart 
-    var chartData = [
-				{
-					value: 8,
-					color:"#F7464A",
-					highlight: "#FF5A5E",
-					label: "Javascript"
-				},
-				{
-					value: 8,
-					color: "#46BFBD",
-					highlight: "#5AD3D1",
-					label: "HTML/CSS"
-				},				
-				{
-					value: 7,
-					color: "#949FB1",
-					highlight: "#A8B3C5",
-					label: "jQuery"
-				},
-                  {
-					value: 7,
-					color: "#4D5360",
-					highlight: "#616774",
-					label: "Node.js"
-				},
-                   {
-					value: 7,
-					color: "#73A2ED",
-					highlight: "#73A2ED",
-					label: "Angular.js"
-				},
-				{
-					value: 6,
-					color: "#46F795",
-					highlight: "#46F795",
-					label: "MongoDB"
-				},                                            
-                 {
-					value: 5,
-					color: "#FFCDAB",
-					highlight: "#FFCDAB",
-					label: "Ionic"
-				},
-                 {
-					value: 5,
-					color: "#B0CCF9",
-					highlight: "#B0CCF9",
-					label: "Wordpress"
-				},
-                {
-					value: 5,
-					color: "#A9F8EB",
-					highlight: "#A9F8EC",
-					label: "Ruby on Rails"
-				}
-			];
+    // skills chart
+    var chartData = {
+        labels: ["Javascript", "HTML5", "CSS", "jQuery", "Node.js", "AngularJS", "MongoDB","Ionic","Wordpress","Ruby on Rails"],
+        datasets: [         
+            {                   
+                label: "My 1st dataset",
+                fillColor: "rgba(151,187,205,0.5)",
+                strokeColor: "#ec9b00",
+                highlightFill: "rgba(151,187,205,0.75)",
+                highlightStroke: "#ec9b00",                                
+                data: [8, 8, 8, 7, 7, 7, 6,6,5,5]
+            }
+        ]
+    };     
             // Get context with jQuery - using jQuery's .get() method.
             var ctx = $("#skills-chart").get(0).getContext("2d");
             // This will get the first returned node in the jQuery collection.
-            var myNewChart = new Chart(ctx).PolarArea(chartData, {
-					// responsive:true,
-                    scaleShowLabelBackdrop: false,
-                    scaleShowLine : false,
-                    tooltipTemplate: "<%if (label){%><%=label%><%}%>"                            
-                        });			
+            var myBarChart = new Chart(ctx).Bar(chartData, {
+                responsive: false,
+                scaleShowHorizontalLines: true,
+                scaleShowVerticalLines: false,
+                // scaleShowGridLines : false,
+                tooltipTemplate: "<%if (label){%><%=label%><%}%>",
+                scaleShowLabels: true,
+                scaleOverride:true,
+                scaleSteps:5,
+                scaleStartValue:0,
+                scaleStepWidth:2,
+                scaleLabel: function (valuePayload) {
+                    if(Number(valuePayload.value)===0)    
+                    return 'No clue what is going on...';
+                    if(Number(valuePayload.value)===2)    
+                    return 'I think I have seen this...';
+                    if(Number(valuePayload.value)===4)    
+                    return 'Worked with before...';                    
+                    if(Number(valuePayload.value)===6)    
+                    return 'Getting comfortable...';
+                    if(Number(valuePayload.value)===8)    
+                    return 'Confident in my skills...';
+                    if(Number(valuePayload.value)===10)    
+                    return 'Unstoppable...';                    
+                    }                
+            });
+            // var myNewChart = new Chart(ctx).PolarArea(chartData, {
+			// 		// responsive:true,
+            //         scaleShowLabelBackdrop: false,
+            //         scaleShowLine : false,
+            //         tooltipTemplate: "<%if (label){%><%=label%><%}%>"                            
+            //             });			
         
     // scrolls through testimonials
     $('.carousel').carousel({
