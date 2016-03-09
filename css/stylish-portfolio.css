@@ -185,9 +185,19 @@ hr {
    width: 100%;
 }
 .about-section {
-    padding-top: 25px 0;
+     padding: 5px 0;
      background: url(../img/Subtle-Light.jpg) no-repeat center center scroll;
      background-size: cover;
+}
+
+.carousel-caption {    
+   color: #fff;
+   -webkit-text-fill-color: white; /* Will override color (regardless of order) */
+   -webkit-text-stroke-width: 1px;
+   -webkit-text-stroke-color: black;   
+}
+.caption-p{
+    font-size: 18px;
 }
 
 .carousel-indicators .active {
@@ -215,7 +225,7 @@ hr {
 }
 
 .services {
-    padding: 25px 0;    
+    padding: 5px 0;    
     background-color: #efefef;
     color: #333;
     background: url(../img/Subtle-Light.jpg) center scroll;
@@ -247,7 +257,7 @@ hr {
 /* Portfolio */
 
 .portfolio {
-    padding: 50px 0;
+    padding: 5px 0;
     background: url(../img/Subtle-Light.jpg)
 }
 
@@ -289,4 +299,6 @@ hr {
 
 footer {
     padding: 100px 0;
+    background: url(../img/Subtle-Light.jpg) no-repeat center center scroll;
+    background-size: cover;
 }
