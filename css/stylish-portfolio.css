@@ -179,7 +179,9 @@ hr {
 }
 
 /* About */
-
+.about-header{
+    margin-top: 0px;
+}
 .about-me-img {
    height: 100%;
    width: 100%;
@@ -220,7 +222,7 @@ hr {
 @media (min-width: 650px) {
     #skills-chart {
         width: 800px;
-        height: 600px;
+        height: 400px;
     }
 }
 
@@ -261,6 +263,9 @@ hr {
     background: url(../img/Subtle-Light.jpg)
 }
 
+.portfolio-name a{
+    color: #333;
+}
 .portfolio-item {
     margin-bottom: 30px;
 }
